@@ -30,7 +30,7 @@
                                     [
                                         "arn:aws:s3:::",
                                         {
-                                            "Ref": "S3Bucket"
+                                            "Ref": "jenkinscftpipelines3bkt"
                                         },
                                         "/*"
                                     ]
@@ -40,7 +40,7 @@
                     ]
                 },
                 "Bucket": {
-                    "Ref": "S3Bucket"
+                    "Ref": "jenkinscftpipelines3bkt"
                 }
             }
         }
@@ -49,7 +49,7 @@
         "WebsiteURL": {
             "Value": {
                 "Fn::GetAtt": [
-                    "S3Bucket",
+                    "jenkinscftpipelines3bkt",
                     "WebsiteURL"
                 ]
             },
@@ -63,7 +63,7 @@
                         "https://",
                         {
                             "Fn::GetAtt": [
-                                "S3Bucket",
+                                "jenkinscftpipelines3bkt",
                                 "DomainName"
                             ]
                         }
